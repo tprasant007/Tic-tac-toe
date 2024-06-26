@@ -1,0 +1,74 @@
+body {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box-container {
+  width: 550px;
+  height: 550px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+}
+
+#box-container > div {
+  border: 1px solid black;
+}
+
+/* Remove outer borders */
+#box-container > div:nth-child(1),
+#box-container > div:nth-child(2),
+#box-container > div:nth-child(3) {
+  border-top: none;
+}
+#box-container > div:nth-child(3n + 1) {
+  border-left: none;
+}
+#box-container > div:nth-child(3n) {
+  border-right: none;
+}
+#box-container > div:nth-child(7),
+#box-container > div:nth-child(8),
+#box-container > div:nth-child(9) {
+  border-bottom: none;
+}
+
+.dialogue-box {
+  padding: 0.5em 1.5em;
+  font-size: 3em;
+  background-color: rgb(210, 210, 210);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.new-game-btn {
+  background-color: #04aa6d;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
